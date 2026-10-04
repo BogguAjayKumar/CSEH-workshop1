@@ -1,16 +1,41 @@
-# React + Vite
+# 🛡️ CSEH Cybersecurity & Networking Workshop
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Workshop resources, slides, code demonstrations, and guide material for the **CSEH Club Cybersecurity Workshop #1**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Workshop Objectives
 
-## React Compiler
+This workshop was created to introduce engineering students to core concepts in cybersecurity, network architecture, and security tools.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 📖 Topics Covered
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. **Cybersecurity Fundamentals:**
+   - Confidentiality, Integrity, and Availability (CIA Triad)
+   - Common attack vectors & threat models
+
+2. **Networking Basics:**
+   - OSI & TCP/IP models
+   - IP addressing, MAC addresses, and subnetting fundamentals
+   - Wi-Fi protocol security (WPA2/WPA3 overview)
+
+3. **Hands-on Kali Linux Demo:**
+   - Terminal navigation & shell essentials
+   - Basic network scanning tools (`nmap`, `ping`, `traceroute`)
+   - Wi-Fi analysis concepts
+
+---
+
+## 🛠️ Stack & Resources
+
+- **OS Environment:** Kali Linux
+- **Tools:** Terminal, Bash, Networking utilities
+- **Code:** JavaScript / Web presentation helpers
+
+---
+
+## 👥 Target Audience
+
+B.Tech students and beginners interested in exploring cybersecurity and Linux security tools.
