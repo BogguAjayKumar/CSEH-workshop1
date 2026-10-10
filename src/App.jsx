@@ -6,6 +6,11 @@ import LinuxBasics from './components/LinuxBasics';
 import WifiFundamentals from './components/WifiFundamentals';
 import WifiLab from './components/WifiLab';
 import Challenge from './components/Challenge';
+import Quiz from './components/Quiz';
+import WakeUp from './components/WakeUp';
+import Arcade from './components/Arcade';
+import SecurityUpgrades from './components/SecurityUpgrades';
+import AnimeVisualizer from './components/AnimeVisualizer';
 import Wrapup from './components/Wrapup';
 import MatrixBackground from './components/MatrixBackground';
 
@@ -35,16 +40,20 @@ export default function App() {
     }
   };
 
-  // Map of tabs with their times and labels
+  // Map of tabs in pedagogical teaching order (Theory -> Setup -> Net -> Attack -> Defense -> Visualizer -> CTF/Quiz -> Wrapup)
   const navTabs = [
-    { id: 'intro', time: '10:00 - 10:40', label: '1. Intro & Fundamentals' },
+    { id: 'intro', time: '10:00 - 10:40', label: '1. Intro, Vuln & Exploits' },
     { id: 'rules', time: '10:40 - 10:50', label: '2. RoE & Lab Rules' },
-    { id: 'kalisetup', time: '10:50 - 12:15', label: '3. Kali VM Setup' },
-    { id: 'linuxbasics', time: '12:30 - 1:00', label: '4. Linux & Networks' },
-    { id: 'wififundamentals', time: '1:00 - 1:30', label: '5. Wi-Fi Handshake' },
-    { id: 'wifilab', time: '1:30 - 2:45', label: '6. Controlled Wi-Fi Lab' },
-    { id: 'challenge', time: '2:45 - 3:15', label: '7. Mini CTF Challenges' },
-    { id: 'wrapup', time: '3:15 - 3:30', label: '8. Wrap-up & Careers' },
+    { id: 'kalisetup', time: '10:50 - 12:15', label: '3. OS, Kernel & Kali VM' },
+    { id: 'linuxbasics', time: '12:30 - 1:00', label: '4. Linux, MAC, IP & Networks' },
+    { id: 'wififundamentals', time: '1:00 - 1:30', label: '5. Wi-Fi Modes & Channels' },
+    { id: 'wifilab', time: '1:30 - 2:30', label: '6. Controlled Wi-Fi Lab' },
+    { id: 'upgrades', time: '2:30 - 3:00', label: '7. Defense & Security Upgrades' },
+    { id: 'anime', time: '3:00 - 3:25', label: '8. 🎌 Anime Cyber Theater' },
+    { id: 'challenge', time: '3:25 - 3:45', label: '9. Mini CTF Challenges' },
+    { id: 'quiz', time: '3:45 - 4:00', label: '10. Cyber Security Quiz' },
+    { id: 'arcade', time: 'BREAK / ANY', label: '11. Cyber Arcade & Bio-Defrag' },
+    { id: 'wrapup', time: '4:00 - 4:15', label: '12. Wrap-up & Careers' },
   ];
 
   const renderContent = () => {
@@ -61,8 +70,18 @@ export default function App() {
         return <WifiFundamentals />;
       case 'wifilab':
         return <WifiLab onCompleteFlag={handleCaptureFlag} />;
+      case 'upgrades':
+        return <SecurityUpgrades />;
+      case 'anime':
+        return <AnimeVisualizer />;
       case 'challenge':
         return <Challenge onCompleteFlag={handleCaptureFlag} />;
+      case 'quiz':
+        return <Quiz onCompleteFlag={handleCaptureFlag} />;
+      case 'arcade':
+        return <Arcade onCompleteFlag={handleCaptureFlag} />;
+      case 'wakeup':
+        return <WakeUp />;
       case 'wrapup':
         return <Wrapup />;
       default:
